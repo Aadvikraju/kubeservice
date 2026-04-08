@@ -1,0 +1,14 @@
+How it works (Simple Flow)
+  User sends request → LoadBalancer IP
+  Service receives request on port 80
+  Service checks selector (app=myapp)
+  Finds matching Pods
+  Sends traffic to targetPort 80 on Pods
+  Pod responds back to user
+  
+
+
+This YAML defines a Kubernetes Service of type LoadBalancer.
+It exposes my application to external users. 
+the Service listens on port 80 and forwards traffic to pods on port 80 using the selector app=myapp. 
+Kubernetes automatically creates a load balancer and assigns a public IP so users can access the application from the internet.

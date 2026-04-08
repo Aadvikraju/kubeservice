@@ -1,0 +1,1 @@
+kubectl expose deploy myapp --port 80 --type=LoadBalancer --dry-run -o yaml>service.yaml
